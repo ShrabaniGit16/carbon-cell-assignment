@@ -1,0 +1,16 @@
+.parent-conatiner {
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  background-color: black !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.data-card {
+  background-color: #272727;
+  color: rgba(255, 255, 255, 0.87) !important;
+  border-radius: 0.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1em;
+  height: 18rem;
+}

@@ -1,9 +1,5 @@
-import LineChart from "./LineChart/LineChart"
+import LineChart from "./LineChart/LineChart";
+import BarChart from "./BarChart/BarChart";
+import PopulationChart from './PopulationChart'
 
-
-
-
-
-export {
-    LineChart
-}
+export { BarChart, LineChart, PopulationChart };

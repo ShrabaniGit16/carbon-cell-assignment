@@ -1,17 +1,13 @@
 import React from "react";
 import { Chart as ChartJS, defaults } from "chart.js/auto";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
-// defaults.plugins.title.display = true;
-// defaults.plugins.title.align = "start";
-// defaults.plugins.title.color = "black";
-// defaults.plugins.title.font.size = 20;
-
-const LineChart = ({ labels, population }) => {
-   return (
+const BarChart = ({labels, population }) => {
+  
+  return (
     <div className="col-12 col-md-6">
       <div className="data-card">
-        <Line
+        <Bar
           data={{
             labels: labels,
             datasets: [
@@ -20,7 +16,6 @@ const LineChart = ({ labels, population }) => {
                 data: population,
                 backgroundColor: "#5ef9e3",
                 borderColor: "#5ef9e3",
-                
               },
             ],
           }}
@@ -61,4 +56,4 @@ const LineChart = ({ labels, population }) => {
   );
 };
 
-export default LineChart;
+export default BarChart;

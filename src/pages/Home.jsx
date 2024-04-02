@@ -1,35 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { LineChart } from "../features/Charts";
-import axios from "axios";
+import React from "react";
+import { PopulationChart } from "../features/Charts";
+import BitcoinPrices from "../features/BitcoinPrices/BitcoinPrices";
+
+
 
 const Home = () => {
-  const [chartData, setChartData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const data = await axios.get(
-                "https://datausa.io/api/data?drilldowns=Nation&measures=Population"
-              );
-        
-              setChartData(data.data.data);
-              return data;   
-        } catch (error) {
-           throw Error(error) 
-        }
-     
-    };
-    fetchData()
-  }, []);
-
-  console.log(chartData)
-
+ 
   return (
-    <div>
-      <h1>Hello, ABC</h1>
-      <p>Population chart and cryptocurrency prices</p>
-      <div>
-        <LineChart chartData={chartData}/>
+    <div className="parent-conatiner">
+      <div >
+        <div className="row">
+          <p>
+            Hello,<span> User</span> 😊
+          </p>
+          <p>Population chart and cryptocurrency prices</p>
+        </div>
+
+        <PopulationChart/>
+        
+        <div className="row mt-3 justify-content-between">
+          <p className="col-4">Assets</p>
+          <p className="col-4">Today</p>
+        </div>
+        <BitcoinPrices/>
+
       </div>
     </div>
   );
