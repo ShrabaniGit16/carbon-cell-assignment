@@ -10,15 +10,15 @@ const Home = () => {
     <div className="parent-conatiner">
       <div >
         <div className="row">
-          <p>
-            Hello,<span> User</span> 😊
+          <p className="heading">
+            Hello,<span className="user"> User</span> 😊
           </p>
-          <p>Population chart and cryptocurrency prices</p>
+          <p className="description">Population chart and cryptocurrency prices</p>
         </div>
 
         <PopulationChart/>
         
-        <div className="row mt-3 justify-content-between">
+        <div className="row  justify-content-between">
           <p className="col-4">Assets</p>
           <p className="col-4">Today</p>
         </div>

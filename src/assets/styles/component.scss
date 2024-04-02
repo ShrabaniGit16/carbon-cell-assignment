@@ -4,6 +4,26 @@
   padding: 1rem;
   background-color: black !important;
   color: rgba(255, 255, 255, 0.87) !important;
+
+  .heading {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0;
+
+    span {
+      .user {
+        color: linear-gradient(
+          90deg,
+          rgba(5, 211, 219, 1) 0%,
+          rgba(0, 255, 192, 1) 100%
+        ) !important;
+      }
+    }
+  }
+  .description{
+    font-size: .8rem;
+  }
 }
 
 .data-card {
@@ -12,5 +32,5 @@
   border-radius: 0.5em;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 1em;
-  height: 18rem;
+  height: 17rem;
 }

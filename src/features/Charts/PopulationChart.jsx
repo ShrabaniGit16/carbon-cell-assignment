@@ -18,7 +18,7 @@ const PopulationChart = () => {
           );
   
           setChartData(data.data.data);
-          return data;
+        
         } catch (error) {
           throw Error(error);
         }
@@ -30,7 +30,7 @@ const PopulationChart = () => {
     const population = chartData?.map((data) => data.Population).reverse();
 
   return (
-    <div className="row mt-2 g-3">
+    <div className="row g-3">
     <LineChart labels={labels} population={population}/>
     <BarChart labels={labels} population={population} />
   </div>
