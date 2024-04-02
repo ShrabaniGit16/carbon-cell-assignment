@@ -6,7 +6,7 @@ import RootLayout from "./layout/RootLayout";
 function App() {
   return (
     <Routes>
-      <Route path="/" Component={RootLayout} />
+      <Route path="/" Component={Home} />
     </Routes>
   );
 }
