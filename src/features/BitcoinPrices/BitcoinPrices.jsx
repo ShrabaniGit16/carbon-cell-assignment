@@ -8,6 +8,7 @@ import PriceCard from "../../components/PriceCard/PriceCard";
 
 const BitcoinPrices = () => {
   const [prices, setPrices] = useState();
+  const [loading, setLoading] = useState(false);
 
   const coinPrices = [
     {
@@ -38,10 +39,12 @@ const BitcoinPrices = () => {
 
   useEffect(() => {
     const fetchPrices = async () => {
+      setLoading(true);
       try {
         const data = await axios.get(
           "https://api.coindesk.com/v1/bpi/currentprice.json"
         );
+        setLoading(false);
         setPrices(data.data.bpi);
       } catch (error) {
         throw Error(error);
@@ -52,7 +55,10 @@ const BitcoinPrices = () => {
 
   return (
     <div className="row g-3">
-      {prices &&
+      {loading && <p className="text-center">Loading...</p>}
+
+      {!loading &&
+        prices &&
         coinPrices.map((ele, index) => (
           <PriceCard coinData={ele} key={index} />
         ))}

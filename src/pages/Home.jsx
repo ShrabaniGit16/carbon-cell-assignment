@@ -18,9 +18,9 @@ const Home = () => {
 
         <PopulationChart/>
         
-        <div className="row  justify-content-between">
-          <p className="col-4">Assets</p>
-          <p className="col-4">Today</p>
+        <div className="assets">
+          <p >Assets</p>
+          <p >Today</p>
         </div>
         <BitcoinPrices/>
 

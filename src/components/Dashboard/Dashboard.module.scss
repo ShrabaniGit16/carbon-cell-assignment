@@ -1,33 +1,23 @@
 header {
-  height: 3rem;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  background-color: red;
+  height: 1.5rem;
+  background-color: black !important;
 
-  // .heading {
-  //   display: inline-block;
-
-  //   margin-right: 20rem;
-  // }
   .menu {
     .menubar {
       display: inline-block;
       justify-self: flex-start;
-      margin-right: 1rem;
+      padding-top: 0.5rem;
+      margin-left: 1rem;
       width: 1rem;
-
-      // @media (min-width: 768px) {
-      //   visibility: hidden;
-      // }
+      fill: #ffffff;
     }
 
     .navbar {
       position: absolute;
       top: 0;
       left: 0;
-      width: 50%;
-      z-index: 10;
+      width: 90%;
+
       max-width: 20rem;
       min-width: 12rem;
       padding: 1rem;
@@ -36,6 +26,10 @@ header {
       height: 100vh;
       // visibility: hidden;
       display: inline-block;
+
+      @media (min-width: 768px) {
+        width: 50%;
+      }
     }
 
     .nav-header {
@@ -57,13 +51,22 @@ header {
       list-style: none;
       padding-left: 0;
       li {
-        width: 100%;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        svg {
-          width: 0.8rem;
-          fill: #ffffff;
-          margin-right: 1rem;
+        a {
+          width: 100%;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+
+          svg {
+            width: 0.8rem;
+            fill: #ffffff;
+            margin-right: 1rem;
+          }
+          &:hover {
+            color: #5ef9e3;
+          }
+          &.active{
+            color: #45e4cc;
+          }
         }
       }
     }

@@ -1,7 +1,9 @@
 .parent-conatiner {
-  min-height: 100vh;
+  height: fit-content;
+  min-height: calc(100vh - 1.5rem);
   width: 100%;
   padding: 1rem;
+  padding-top: 0.5rem;
   background-color: black !important;
   color: rgba(255, 255, 255, 0.87) !important;
 
@@ -21,8 +23,19 @@
       }
     }
   }
-  .description{
-    font-size: .8rem;
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .assets {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > P {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
   }
 }
 
