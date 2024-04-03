@@ -2,13 +2,13 @@ import React from "react";
 import classes from "./PriceCard.module.scss";
 
 const PriceCard = ({ coinData }) => {
-  
+    
   return (
     <div className="col-12 col-sm-6 col-md-3">
       <div className={classes["price-card"]}>
         <div className={classes["card-header"]}>
           <div className={classes.icon}>
-            <img src={`${coinData.icon}`} alt="" />
+            <img src={coinData.icon} alt="" />
           </div>
           <p className={classes.title}>{coinData.title}</p>
         </div>

@@ -1,0 +1,35 @@
+header {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    background-color: #272727;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    color: #fafafa;
+
+    svg {
+      width: 1rem;
+      fill: white;
+    }
+
+    .menubar {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+    .user {
+      margin-right: 1rem;
+    }
+
+    p {
+      display: block;
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 0;
+    }
+  }
+}

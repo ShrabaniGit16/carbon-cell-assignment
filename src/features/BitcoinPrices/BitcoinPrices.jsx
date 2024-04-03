@@ -2,8 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import nbst from "../../assets/icons/mountain.png";
 import eft from "../../assets/icons/light-bulb.png";
-import wpct from "../../assets/icons/mountain.png";
-import wet from "../../assets/icons/mountain.png";
+import wpct from "../../assets/icons/recycle.png";
+import wet from "../../assets/icons/droplet.png";
 import PriceCard from "../../components/PriceCard/PriceCard";
 
 const BitcoinPrices = () => {
@@ -14,25 +14,25 @@ const BitcoinPrices = () => {
     {
       title: "NBST",
       tagline: "Nature Based Solution Token",
-      icon: "../../assets/icons/mountain.png",
+      icon: nbst,
       ...prices,
     },
     {
       title: "EFT",
       tagline: "Energy Efficiency Token",
-      icon: "../../assets/icons/light-bulb.png",
+      icon: eft,
       ...prices,
     },
     {
       title: "WPCT",
       tagline: "Waste Management and Plastic Credits Tokens",
-      icon: "../../assets/icons/recycle.png",
+      icon: wpct,
       ...prices,
     },
     {
       title: "WET",
       tagline: "Water Token",
-      icon: "../../assets/icons/droplet.png",
+      icon:wet,
       ...prices,
     },
   ];

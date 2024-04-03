@@ -1,0 +1,56 @@
+.sidebar {
+  display: none;
+  background-color: black;
+  width: 25%;
+  // max-width: 12rem;
+  // min-width: 10rem;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  padding: 1rem;
+  color: #ffffff;
+  height: 100vh;
+  border-right: 1px solid #5ef9e3;
+
+  @media (min-width: 600px) {
+    display: block;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .links {
+    padding-left: 0;
+    .sidelink {
+      display: flex;
+      cursor: pointer;
+      margin-bottom: 20px;
+     
+
+      a {
+        padding: 0.5rem 1rem;
+        &:hover {
+          color: #5ef9e3;
+        }
+
+        &.active {
+          color: #ffffff;
+          background-color: #5ef9e3;
+        }
+        svg {
+          width: 0.8rem;
+          fill: #ffffff;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

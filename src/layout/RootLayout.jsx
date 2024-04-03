@@ -1,13 +1,21 @@
-import React from "react";
-import Dashboard from "../components/Dashboard/Dashboard";
+import React, { useState } from "react";
+import Header from "../components/Header/Header";
+import Sidebar from "../components/Sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
+  const [showSidebar, setShowSidebar] = useState(true);
   return (
     <>
-      <Dashboard />
+      <Header setShowSidebar={setShowSidebar} showSidebar={showSidebar} />
+
+      <Sidebar />
       <main>
-        <Outlet />
+        <div
+          className={`main-container ${showSidebar ? "" : 'shrink-container'}`}
+        >
+          <Outlet />
+        </div>
       </main>
     </>
   );
