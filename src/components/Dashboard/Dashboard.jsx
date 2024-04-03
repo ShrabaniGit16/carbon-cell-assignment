@@ -26,7 +26,7 @@ const Dashboard = () => {
         {showSidenav && (
           <div className={classes.navbar}>
             <div className={classes["nav-header"]}>
-              <p>Carbon Cell</p>
+              <p>Carbon </p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
